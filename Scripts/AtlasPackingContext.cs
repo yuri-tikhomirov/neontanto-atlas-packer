@@ -108,7 +108,7 @@ namespace NeonTanto.Tools.AtlasPacking
         private bool TryGetExpandData(RectInt rect, out AtlasExpandData expandData)
         {
             expandData = default;
-            if (rect.xMax > maxSize.x || rect.yMax > maxSize.x) return false;
+            if (rect.xMax > maxSize.x || rect.yMax > maxSize.y) return false;
 
             var size = atlas.size;
 

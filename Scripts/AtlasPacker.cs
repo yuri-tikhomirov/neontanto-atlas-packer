@@ -13,10 +13,15 @@ namespace NeonTanto.Tools.AtlasPacking
 
         public AtlasPackData PackData { get; private set; }
 
-        public AtlasPacker(uint padding = 2, uint maxSize = 4096)
+        public AtlasPacker(uint padding = 2, uint maxSize = 4096) 
+            : this(padding, maxSize, maxSize)
+        {
+        }
+        
+        public AtlasPacker(uint padding, uint maxWidth, uint maxHeight)
         {
             this.padding = Vector2Int.one * (int)padding;
-            this.maxSize = Vector2Int.one * (int)maxSize + this.padding;
+            this.maxSize = new Vector2Int((int)maxWidth, (int)maxHeight) + this.padding;
 
             contexts = new List<AtlasPackingContext>();
             packedAtlases = new List<AtlasData>();
