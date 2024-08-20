@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-
+﻿
 namespace NeonTanto.Tools.AtlasPacking
 {
     internal struct AtlasExpandData

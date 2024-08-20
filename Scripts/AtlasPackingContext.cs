@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace NeonTanto.Tools.AtlasPacking
 {
@@ -115,8 +114,8 @@ namespace NeonTanto.Tools.AtlasPacking
 
             var delta = new Vector2Int
             {
-                x = Mathf.Max(0, rect.xMax - size.x),
-                y = Mathf.Max(0, rect.yMax - size.y)
+                x = System.Math.Max(0, rect.xMax - size.x),
+                y = System.Math.Max(0, rect.yMax - size.y)
             };
 
             var multiplierX = atlas.size.x / atlas.size.y;
